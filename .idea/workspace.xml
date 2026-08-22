@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b9cc75a-8cfb-47ef-8ea1-6e758466323c" name="Changes" comment="almost finish just a few more fix ups">
-      <change afterPath="$PROJECT_DIR$/Luis_ProgrammingExercise_1.py" afterDir="false" />
+    <list default="true" id="8b9cc75a-8cfb-47ef-8ea1-6e758466323c" name="Changes" comment="finished">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tickertest.py" beforeDir="false" />
     </list>
@@ -63,6 +62,8 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.Luis_Programming Exercise_1.executor": "Run",
+    "Python.Luis_ProgrammingExercise_1.executor": "Run",
+    "Python.doc_string_converter.executor": "Run",
     "Python.hello world.executor": "Run",
     "Python.tickertest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -136,7 +137,7 @@
       <workItem from="1787340084182" duration="1134000" />
       <workItem from="1787341239247" duration="3617000" />
       <workItem from="1787414447221" duration="19000" />
-      <workItem from="1787414488173" duration="4575000" />
+      <workItem from="1787414488173" duration="5295000" />
     </task>
     <task id="LOCAL-00001" summary="first commit ever">
       <option name="closed" value="true" />
@@ -194,7 +195,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787344766931</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="finished">
+      <option name="closed" value="true" />
+      <created>1787430886158</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1787430886159</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +224,8 @@
     <MESSAGE value="first commit ever" />
     <MESSAGE value="started homework for COP" />
     <MESSAGE value="almost finish just a few more fix ups" />
-    <option name="LAST_COMMIT_MESSAGE" value="almost finish just a few more fix ups" />
+    <MESSAGE value="finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -229,7 +239,8 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/COP2373$Luis_Programming_Exercise_1.coverage" NAME="Luis_Programming Exercise_1 Coverage Results" MODIFIED="1787417773760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/COP2373$Luis_Programming_Exercise_1.coverage" NAME="Luis_ProgrammingExercise_1 Coverage Results" MODIFIED="1787430849025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/COP2373$tickertest.coverage" NAME="tickertest Coverage Results" MODIFIED="1787342647849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/COP2373$doc_string_converter.coverage" NAME="doc_string_converter Coverage Results" MODIFIED="1787430928896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
