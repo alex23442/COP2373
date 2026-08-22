@@ -1,0 +1,51 @@
+# Technical Design Document: Luis_ProgrammingExercise_1
+
+# Name: Luis Calel De Leon
+# Date: August 22, 2026
+# Program Description: This program will ask user how many tickets they want, check if it’s within limit and valid, and run until all tickets are sold out.
+
+## Function: checking_tickets
+
+Checks the number of tickets ordered by the buyer and determines
+whether the purchase can be made or not.
+
+Parameters:
+ticket_limit(int): The max number of tickets a buyer can buy.
+tickets_left(int): The number of tickets left.
+buyers(int): The number of buyers that made the purchase.
+
+Variables:
+user_tickets(int): The number of tickets wanted by the buyer.
+
+Logic:
+1.Prompt the user to enter the number of tickets they want to buy.
+2.checks that the amount they requested is within the ticket limit
+  and that there's enough tickets available.
+3.If purchase is valid, subtract the tickets from the
+  remaining tickets  and increase the number of buyers.
+4.If not enough tickets available, display the number of tickets
+  remaining.
+5.If the buyer exceeds the ticket limit, display an error message.
+6.Return the updated number of tickets and buyers.
+
+Return:
+Returns the updated values of tickets_left and buyers.
+
+## Function: interface
+Controls the main flow of the program.
+
+Parameters:
+None
+
+Variables:
+tickets_left(int): The number of tickets left.
+ticket_limit(int): The max number of tickets the buyer can purchase.
+buyers(int): The number of buyers that made the purchase.
+
+Return:
+None
+
+
+
+
+#Link to your repository: https://github.com/alex23442/COP2373.git
