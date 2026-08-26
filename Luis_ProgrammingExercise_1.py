@@ -49,8 +49,11 @@ def checking_tickets(ticket_limit, tickets_left,buyers ):
     if user_tickets <= ticket_limit and tickets_left - user_tickets >= 0:
         tickets_left -= user_tickets
         buyers += 1
-        print(buyers)
-        print(tickets_left)
+        if tickets_left > 0:
+            print(f"the number of tickets left is : {tickets_left}")
+
+        else:
+            pass
 
     #checks if the amount of tickets the buyers want is within the ticket limit and greater than the
     #tickets left. If so, prompt the user with a display letting them know how many tickets are left.
@@ -98,8 +101,8 @@ def interface():
                                                 tickets_left,
                                                 buyers)
 
+    print("\nsorry sold out come back next time")
+    print(f"\nthe total number of buyers is: {buyers} ")
 
-    print(buyers)
-    print("sorry sold out come back next time")
 
 interface()
