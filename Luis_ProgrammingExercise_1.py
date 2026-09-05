@@ -86,7 +86,7 @@ def interface():
     None
     """
 
-    tickets_left = 20
+    tickets_left = 10
     ticket_limit = 4
     buyers = 0
 
