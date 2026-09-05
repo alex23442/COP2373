@@ -33,7 +33,7 @@ def checking_tickets(ticket_limit, tickets_left,buyers ):
     #returns the current values(ticket_left, buyers).
     #if they enter a negative number it returns the current values(ticket_left,buyers) again.
     try:
-        user_tickets = int(input("how many tickets do you want?"))
+        user_tickets = int(input("Hello there, how much tickets would you like?"))
         if user_tickets <= 0:
             print("enter a positive integer")
             return tickets_left,buyers
