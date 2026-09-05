@@ -1,5 +1,5 @@
 
-def checking_tickets(ticket_limit, tickets_left,buyers ):
+def checking_tickets(ticket_limit, tickets_left,total_buyers ):
     """
     Checks the number of tickets ordered by the buyer and determines
     whether the purchase can be made or not.
@@ -36,19 +36,19 @@ def checking_tickets(ticket_limit, tickets_left,buyers ):
         user_tickets = int(input("Hello there, how much tickets would you like?"))
         if user_tickets <= 0:
             print("enter a positive integer")
-            return tickets_left,buyers
+            return tickets_left,total_buyers
 
 
     except ValueError:
         print("Please enter a valid number")
-        return tickets_left,buyers
+        return tickets_left,total_buyers
 
     #checks for both the amount of tickets the buyer wants is available and is within ticket limit.
     #If so, subtracts the tickets bought from the tickets left, adds one to the successful buyers,
     #and displays both buyers and tickets left.
     if user_tickets <= ticket_limit and tickets_left - user_tickets >= 0:
         tickets_left -= user_tickets
-        buyers += 1
+        total_buyers += 1
         if tickets_left > 0:
             print(f"the number of tickets left is : {tickets_left}")
 
@@ -67,7 +67,7 @@ def checking_tickets(ticket_limit, tickets_left,buyers ):
         print("the limit is 4 tickets")
 
     #returns the updated values of tickets_left and buyers.
-    return tickets_left,buyers
+    return tickets_left,total_buyers
 
 
 def interface():
