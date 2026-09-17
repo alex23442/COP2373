@@ -90,33 +90,81 @@ def interface3(user_email,frame):
     frame = ctk.CTkFrame(app)
     frame.pack(fill="both", expand=True)
 
-    label = ctk.CTkLabel(frame, text=useer)
+    from_label = ctk.CTkLabel(frame, text=f"From:{useer}")
+    from_label.pack(anchor="w", pady=5, padx=25)
 
-    label.pack(pady=30)
+    to_label = ctk.CTkLabel(frame, text="To: calel9334@gmail.com")
+    to_label.pack(anchor="w", pady=(15,5), padx=25)
 
-    user_massage = ctk.CTkEntry(frame)
+    subject_label = ctk.CTkLabel(frame, text="Subject:")
+    subject_label.pack(anchor="w", pady=(10, 5), padx=25)
 
-    user_massage.pack(side="bottom", pady=10, padx=25)
+    subject_message = ctk.CTkEntry(frame, width=350, placeholder_text="Subject")
+    subject_message.pack(pady=10, padx=25, fill="x")
 
-    command = interface4(user_massage)
+    user_massage = ctk.CTkTextbox(frame, width=350, height=150)
+    user_massage.pack(pady=10, padx=25, fill="both", expand=True)
 
-def interface4(user_massage):
-    frame = ctk.CTkFrame(app)
-    frame.pack(fill="both", expand=True)
 
-    user_massage = user_massage.get()
 
-    score = 0
+    enter_button = ctk.CTkButton(frame,text="Send", command=lambda: (frame.destroy, app.withdraw()))
+    enter_button.pack(side="bottom", pady=10, padx=20 )
 
-    while True:
-        if user_massage == spam_words.get(user_massage):
-            score += points
+    interface4(user_massage, subject_message)
 
-            print(score)
+def interface4(user_massage, subject_message):
+    spam_window = ctk.CTkToplevel(app)
+    spam_window.geometry("300x250")
+    spam_window.title("spam prevention")
 
-            label = ctk.CTkLabel(frame, text=score)
+    score_label = ctk.CTkLabel(spam_window,text="Your spam score is:0 ")
 
-            label.pack(pady=30)
+    score_label.pack(pady=10)
+
+    status_label = ctk.CTkLabel(spam_window,text="Not spam")
+    status_label.pack(pady=10)
+
+    def update_spam():
+
+        if not user_massage.winfo_exists():
+            return
+
+        massage = user_massage.get('1.0', 'end')
+        subject = subject_message.get()
+
+        score = 0
+
+
+        subject_words = subject.lower().split()
+        user_words = massage.lower().split()
+
+        for word in subject_words:
+
+            if word in spam_words:
+                score += spam_words[word]
+
+        for word in user_words:
+
+            if word in spam_words:
+                score += spam_words[word]
+
+        score_label.configure(text=f"spam score: {score}")
+
+        if score >= 10:
+            status_label.configure(text=f"SUSPICIOUS")
+
+        elif score >= 20:
+            status_label.configure(text=f"SPAM")
+
+
+        else:
+            status_label.configure(text=f"NOT SPAM")
+
+        spam_window.after(100, update_spam)
+
+    update_spam()
+
+
 
 
 
