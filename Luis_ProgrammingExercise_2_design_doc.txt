@@ -1,0 +1,94 @@
+# Technical Design Document: Luis_ProgrammingExercise_2
+
+# Name: Luis Calel De Leon
+# Date: September 20, 2026
+# Program Description: This program will detect if the message being sent is a spam or not.
+
+## Function: interface1
+Asks the user if they want to send a message or not.
+
+Parameters:
+None
+
+Variables:
+frame = creates a frame for the first interface
+label = creates a label that has a text on it that says "Do you want to send a message?"
+yes_button = creates a button that says "Yes" and has a command once pushed it moves onto interface 1.
+no_button = creates a button that says "no" and has a command once pushed destroys the current frame.
+
+
+Logic:
+1.Prompts the user with the question, "DO you want to send a message?"
+2.If user selects yes, they move onto the next interface.
+3.If user selects no it destroys the current frame.
+
+Return:
+None
+
+## Function: interface2
+Prompts the user to enter their email. Once they enter it and they
+press enter, they move to the next interface.
+
+Parameters:
+None
+
+Variables:
+frame = creates a frame for the second interface.
+label = creates a label asking the user to enter their email.
+user_email = stores the email entered by the user.
+enter_button = moves the user to the next interface.
+
+Logic:
+1.Promts the user to enter their email.
+2.Once they press enter, they move onto the next interface.
+
+Return:
+None
+
+## Function: interface3
+The user now has the option to write a message and send it.
+while they are typing, the spam detector gets updated in real time.
+
+Parameters:
+user_email = the email entered by the user.
+frame = the frame from the previous interface.
+
+Variables:
+user_email = stores the user's email.
+subject_message = stores the subject entered by the user.
+user_massage = stores the message entered by the user.
+
+Logic:
+1. Gets the email entered by the user.
+2. Destroys interface2.
+3. Creates interface3 for writing an email.
+4. The user enters a subject and message.
+5. The spam detector updates in real time.
+
+Return:
+user_massage, subject_message
+
+## Function: interface4
+checks and updates in real time if the message being
+sent from the user is a spam or not.
+
+Parameters:
+user_massage = the message entered by the user.
+subject_message = the subject entered by the user.
+
+Variables:
+spam_window = creates a separate window for the spam score.
+score_label = displays the current spam score.
+status_label = displays whether the message is spam.
+
+Logic:
+1. Gets the subject and message from the user.
+2. Splits the subject and message into individual words.
+3. Checks each word against the spam_words dictionary.
+4. Adds the corresponding points to the spam score. 5. Updates the spam score and spam status.
+6. Repeats the process every 100 milliseconds.
+
+Return:
+None
+
+#Link to your repository: https://github.com/alex23442/COP2373.git
