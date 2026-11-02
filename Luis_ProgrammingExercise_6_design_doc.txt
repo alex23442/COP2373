@@ -1,0 +1,52 @@
+# Technical Design Document: Luis_ProgrammingExercise_6
+
+# Name: Luis Calel De Leon
+# Date: November 1, 2026
+# Program Description: This program will allow you to create csv file and read the file.
+
+## Function: creating_csv
+Creates a CSV file and stores student names and exam grades.
+
+Parameters:
+None
+
+Variables:
+num_students(int): The number of students the instructor wants to enter.
+csvfile(file): The CSV file being created.
+writer(object): Writes records into the CSV file.
+i(int): Keeps track of the number of students being entered.
+
+Logic:
+1. Prompts the instructor to enter the number of students.
+2. Opens grades.csv in write mode and creates the file if it doesn't exist.
+3. Writes the column headers into the CSV file.
+4. Uses a for loop to collect each student's information.
+5. Writes each student's name and exam grades as a separate record.
+
+Return:
+None
+
+## Function: reading_csv
+Reads the grades.csv file and displays student information in tabular format.
+
+Parameters:
+None
+
+Variables:
+csvfile(file): The CSV file being opened for reading.
+reader(object): Reads the records stored in the CSV file.
+row(list): Stores each record read from the CSV file.
+
+Logic:
+1. Opens grades.csv in read mode.
+2. Creates a CSV reader to retrieve the records.
+3. Uses a for loop to go through each row in the file.
+4. Uses f-string formatting to align the information into columns.
+5. Displays each student's information in tabular format.
+
+Return:
+None
+
+
+
+#Link to your repository: https://github.com/alex23442/COP2373.git
